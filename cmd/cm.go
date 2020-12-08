@@ -32,8 +32,8 @@ kgen cm \
   --project=YOUR_PROJET \
   --cluster=YOUR_CLUSTER \
   --location=us-central1-a \
-  --metrics="cilium_.*" \
-  --metrics="container_network_transmit_packets_total"
+  --metrics="cilium.*" \
+  --metrics="container_network.*"
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		name, _ := cmd.Flags().GetString("name")
